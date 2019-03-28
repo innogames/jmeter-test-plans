@@ -1,0 +1,1913 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.1 r1853635">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="PROTOCOL" elementType="Argument">
+            <stringProp name="Argument.name">PROTOCOL</stringProp>
+            <stringProp name="Argument.value">${__P(PROTOCOL,https)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="HOST" elementType="Argument">
+            <stringProp name="Argument.name">HOST</stringProp>
+            <stringProp name="Argument.value">${__P(SERVER_NAME,city-builder.innogames-test.com)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PORT" elementType="Argument">
+            <stringProp name="Argument.name">PORT</stringProp>
+            <stringProp name="Argument.value">${__P(PORT,443)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DURATION" elementType="Argument">
+            <stringProp name="Argument.name">DURATION</stringProp>
+            <stringProp name="Argument.value">${__P(DURATION,3600)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="RAMPUP" elementType="Argument">
+            <stringProp name="Argument.name">RAMPUP</stringProp>
+            <stringProp name="Argument.value">${__P(RAMPUP, 5)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="THREAD_COUNT" elementType="Argument">
+            <stringProp name="Argument.name">THREAD_COUNT</stringProp>
+            <stringProp name="Argument.value">${__P(THREAD_COUNT, 1)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="TARGET_RESPONSE_TIME" elementType="Argument">
+            <stringProp name="Argument.name">TARGET_RESPONSE_TIME</stringProp>
+            <stringProp name="Argument.value">${__P(TARGET_RESPONSE_TIME,50)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CREATE_NEW_USER_EVERY_N_SECONDS" elementType="Argument">
+            <stringProp name="Argument.name">CREATE_NEW_USER_EVERY_N_SECONDS</stringProp>
+            <stringProp name="Argument.value">${__P(CREATE_NEW_USER_EVERY_N_SECONDS,6000)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="THREAD_COUNT_TOTAL" elementType="Argument">
+            <stringProp name="Argument.name">THREAD_COUNT_TOTAL</stringProp>
+            <stringProp name="Argument.value">${__P(THREAD_COUNT_TOTAL, 5)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PORTAL_REQ_PER_SEC" elementType="Argument">
+            <stringProp name="Argument.name">PORTAL_REQ_PER_SEC</stringProp>
+            <stringProp name="Argument.value">${__P(PORTAL_REQ_PER_SEC, 15)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="localhost" enabled="false">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="HOST" elementType="Argument">
+            <stringProp name="Argument.name">HOST</stringProp>
+            <stringProp name="Argument.value">localhost</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PORT" elementType="Argument">
+            <stringProp name="Argument.name">PORT</stringProp>
+            <stringProp name="Argument.value">8080</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PROTOCOL" elementType="Argument">
+            <stringProp name="Argument.name">PROTOCOL</stringProp>
+            <stringProp name="Argument.value">http</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="THREAD_COUNT" elementType="Argument">
+            <stringProp name="Argument.name">THREAD_COUNT</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="THREAD_COUNT_TOTAL" elementType="Argument">
+            <stringProp name="Argument.name">THREAD_COUNT_TOTAL</stringProp>
+            <stringProp name="Argument.value">0</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CREATE_NEW_USER_EVERY_N_SECONDS" elementType="Argument">
+            <stringProp name="Argument.name">CREATE_NEW_USER_EVERY_N_SECONDS</stringProp>
+            <stringProp name="Argument.value">10</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="708560271">
+            <stringProp name="1944195532">${THREAD_COUNT}</stringProp>
+            <stringProp name="48">0</stringProp>
+            <stringProp name="668786489">${RAMPUP}</stringProp>
+            <stringProp name="-1798311310">${DURATION}</stringProp>
+            <stringProp name="49">1</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout">6000</stringProp>
+          <stringProp name="HTTPSampler.response_timeout">6000</stringProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="setup" enabled="true">
+          <intProp name="ActionProcessor.action">1</intProp>
+          <intProp name="ActionProcessor.target">0</intProp>
+          <stringProp name="ActionProcessor.duration">0</stringProp>
+        </TestAction>
+        <hashTree>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="setup" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper
+vars.putObject(&apos;jsonSlurper&apos;, new JsonSlurper());
+
+
+// Timer
+vars.put(&apos;samples&apos;, &apos;20&apos;);
+vars.putObject(&apos;respAvg&apos;, ${TARGET_RESPONSE_TIME}.0);
+props.put(&apos;portalRespAvg&apos;, ${TARGET_RESPONSE_TIME}.0);
+vars.putObject(&apos;sleep&apos;, 0.0);
+vars.put(&apos;TIMER&apos;, ${TARGET_RESPONSE_TIME} == 0 ? &apos;throughput&apos; : &apos;respTime&apos;);
+
+log.info(&quot;Using timer &quot; + vars.get(&apos;TIMER&apos;) + &quot; with target response time &quot; + ${TARGET_RESPONSE_TIME});
+
+
+// Game
+vars.putObject(&apos;productions&apos;, [:]);
+vars.putObject(&apos;buildings&apos;, [:]);
+vars.putObject(&apos;constructions&apos;, [:]);
+vars.putObject(&apos;grid&apos;, [])
+vars.remove(&apos;startup_loaded&apos;)
+vars.remove(&apos;cityId&apos;)
+
+def remove = []
+
+vars.entrySet()
+	.collect { it.key }
+	.grep { it.startsWith(&apos;can_&apos;) }
+	.each vars.&amp;remove
+</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="update grid function" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">
+def getGrid(Integer xObj, Integer yObj) {
+	def grid = vars.getObject(&apos;grid&apos;) as List
+
+	int x = xObj?:0
+	int y = yObj?:0
+
+	if (x &lt; 0 || y &lt; 0) {
+		return 0;
+	}
+
+	if (!grid[x]) {
+		return 0;
+	}
+	return grid[x][y] ?: 0
+}
+
+def isFree(Integer x, Integer y) {
+	def UNLOCKED = 1;
+	return getGrid(x, y) == UNLOCKED
+}
+
+def isUnlocked(Integer x, Integer y) {
+	def UNLOCKED = 1;
+	return (getGrid(x, y) &amp; UNLOCKED) == UNLOCKED
+}
+
+def updateGrid(Integer x, Integer y, int width, int height, int state) {
+
+	updateGridAndOr(x, y, width, height, state, vars.getObject(&apos;GRID_ALL&apos;));
+}
+
+
+def updateGridAndOr(Integer x, Integer y, int width, int height, int or, int and) {
+	def grid = vars.getObject(&apos;grid&apos;)
+
+	x = x ?: 0
+	y = y ?: 0
+	for (int dx=x; dx &lt; x+width; dx++) {
+		for (int dy=y; dy &lt; y+height; dy++) {
+			grid[dx] = grid[dx] ?: [];
+			int newVal = grid[dx][dy] ?: 0
+			newVal |= or
+			newVal &amp;= and
+
+			grid[dx][dy] = newVal
+		}
+	}
+}
+
+vars.putObject(&apos;GRID_UNLOCKED&apos;, 1);
+vars.putObject(&apos;GRID_BUILDING&apos;, 2);
+vars.putObject(&apos;GRID_ALL&apos;, 0xFFFFFFF);
+
+vars.putObject(&apos;updateGrid&apos;, this.&amp;updateGrid)
+vars.putObject(&apos;updateGridAndOr&apos;, this.&amp;updateGridAndOr)
+vars.putObject(&apos;gridIsFree&apos;, this.&amp;isFree)
+vars.putObject(&apos;gridIsUnlocked&apos;, this.&amp;isUnlocked)</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Register / Login" enabled="true"/>
+        <hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="if login" enabled="true">
+            <stringProp name="IfController.condition">${__groovy(vars.getObject(&apos;login&apos;) != null)}</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+          </IfController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="master play" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+  &quot;network&quot;: &quot;MASTER_TOKEN&quot;,&#xd;
+  &quot;token&quot;: &quot;${login}&quot;,&#xd;
+  &quot;meta&quot;: {&#xd;
+    &quot;clientVersion&quot;: &quot;string&quot;,&#xd;
+    &quot;deviceHardware&quot;: &quot;string&quot;,&#xd;
+    &quot;deviceName&quot;: &quot;string&quot;,&#xd;
+    &quot;locale&quot;: &quot;en_DK&quot;,&#xd;
+    &quot;networkType&quot;: &quot;string&quot;,&#xd;
+    &quot;operatingSystemName&quot;: &quot;browser&quot;,&#xd;
+    &quot;operatingSystemVersion&quot;: &quot;string&quot;,&#xd;
+    &quot;platform&quot;: &quot;browser&quot;,&#xd;
+    &quot;userAgent&quot;: &quot;string&quot;&#xd;
+  },&#xd;
+  &quot;worldId&quot;: &quot;null&quot;&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${HOST}</stringProp>
+              <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+              <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/core/api/account/directPlay</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout">6000</stringProp>
+              <stringProp name="HTTPSampler.response_timeout">6000</stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Accept</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Content-Type</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - sessionId" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">sessionId</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">sessionId</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="if register" enabled="true">
+            <stringProp name="IfController.condition">${__groovy(vars.getObject(&apos;login&apos;) == null)}</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+          </IfController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="master direct-play" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+  &quot;meta&quot;: {&#xd;
+    &quot;clientVersion&quot;: &quot;string&quot;,&#xd;
+    &quot;deviceHardware&quot;: &quot;string&quot;,&#xd;
+    &quot;deviceName&quot;: &quot;string&quot;,&#xd;
+    &quot;locale&quot;: &quot;en_DK&quot;,&#xd;
+    &quot;networkType&quot;: &quot;string&quot;,&#xd;
+    &quot;operatingSystemName&quot;: &quot;browser&quot;,&#xd;
+    &quot;operatingSystemVersion&quot;: &quot;string&quot;,&#xd;
+    &quot;platform&quot;: &quot;browser&quot;,&#xd;
+    &quot;userAgent&quot;: &quot;string&quot;&#xd;
+  },&#xd;
+  &quot;worldId&quot;: &quot;null&quot;&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${HOST}</stringProp>
+              <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+              <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/core/api/account/directPlay</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout">6000</stringProp>
+              <stringProp name="HTTPSampler.response_timeout">6000</stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Accept</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Content-Type</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - url" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">url</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">url</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - sessionId" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">sessionId</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">sessionId</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - masterLoginToken" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">masterLoginToken</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">masterLoginToken</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - accountId" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">accountId</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">accountId</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+              <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="script">if (!prev.isSuccessful()) {
+	return;
+}
+
+URL url = new URL(vars.get(&quot;url&quot;));
+
+
+vars.put(&quot;protocol&quot;, url.getProtocol());
+vars.put(&quot;host&quot;, url.getHost());
+vars.put(&quot;port&quot;, url.getPort() + &quot;&quot;);
+
+vars.put(&quot;login&quot;, vars.get(&quot;masterLoginToken&quot;))</stringProp>
+                <stringProp name="scriptLanguage">groovy</stringProp>
+              </JSR223PostProcessor>
+              <hashTree/>
+              <JSR223Timer guiclass="TestBeanGUI" testclass="JSR223Timer" testname="JSR223 Timer" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">// Portal Timer
+def local = ${THREAD_COUNT};
+def total = ${THREAD_COUNT_TOTAL};
+
+if (total == 0) {
+	total = local;
+}
+def jmeterInstances = total/local;
+
+def portalReqPerSec = ${PORTAL_REQ_PER_SEC} / jmeterInstances;
+
+def delayMs = 1000 / portalReqPerSec - props.get(&apos;portalRespAvg&apos;);
+
+delayMs = Math.max(0.0, delayMs);
+
+return (int)delayMs;</stringProp>
+              </JSR223Timer>
+              <hashTree/>
+              <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Timing PostProcessor" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">int samples = 5;
+
+double oldAvg = props.get(&apos;portalRespAvg&apos;);
+double newAvg = ((oldAvg * (samples-1)) + prev.getTime()) / samples
+
+props.put(&apos;portalRespAvg&apos;, newAvg);
+</stringProp>
+              </JSR223PostProcessor>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="if has session" enabled="true">
+          <stringProp name="IfController.condition">${__groovy(vars.getObject(&apos;sessionId&apos;) != null)}</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+        </IfController>
+        <hashTree>
+          <RunTime guiclass="RunTimeGui" testclass="RunTime" testname="Behaviour" enabled="true">
+            <stringProp name="RunTime.seconds">${CREATE_NEW_USER_EVERY_N_SECONDS}</stringProp>
+          </RunTime>
+          <hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="CONFIGS" enabled="false"/>
+            <hashTree/>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">X-Auth-Token</stringProp>
+                  <stringProp name="Header.value">${sessionId}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <JSR223Assertion guiclass="TestBeanGUI" testclass="JSR223Assertion" testname="No Error Assertion &amp; Push Handler" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">def jsonSlurper = vars.getObject(&apos;jsonSlurper&apos;) as groovy.json.JsonSlurper;
+def responseString = prev.getResponseDataAsString();
+def response = jsonSlurper.parseText(responseString)
+
+
+if (response[&apos;error&apos;]) {
+	AssertionResult.setFailureMessage(&quot;Error in response: &quot; + response[&apos;error&apos;]);
+     AssertionResult.setFailure(true);
+     return
+}
+
+// handle pushes
+
+// resources
+response.content
+	.grep { it[&apos;@type&apos;] == &apos;type.googleapis.com/ResourceUpdatePush&apos; }
+	.collect { it.changes }
+	.flatten()
+	.each { vars.putObject(&apos;resource.&apos; + it.key, Long.parseLong(it.newAmount)) }
+
+
+// construction
+def constructionDefs = vars.getObject(&apos;gamedesign.constructions&apos;) as Map;
+def constructions = vars.getObject(&apos;constructions&apos;) as Map;
+response.content
+	.grep { it[&apos;@type&apos;] == &apos;type.googleapis.com/ConstructionStartedPush&apos; }
+	.collect { it.construction }
+	.each {
+		it.construction = constructionDefs[it.construction]
+		constructions[it.entityId] = it;
+	}</stringProp>
+            </JSR223Assertion>
+            <hashTree/>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Timing PostProcessor" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">int samples = ${samples};
+println &apos;samples&apos;
+println samples
+
+double oldAvg = vars.getObject(&apos;respAvg&apos;);
+double newAvg = ((oldAvg * (samples-1)) + prev.getTime()) / samples
+println oldAvg
+println newAvg
+vars.putObject(&apos;respAvg&apos;, newAvg);
+</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+            <SwitchController guiclass="SwitchControllerGui" testclass="SwitchController" testname="timer" enabled="true">
+              <stringProp name="SwitchController.value">${TIMER}</stringProp>
+            </SwitchController>
+            <hashTree>
+              <TestAction guiclass="TestActionGui" testclass="TestAction" testname="throughput" enabled="true">
+                <intProp name="ActionProcessor.action">1</intProp>
+                <intProp name="ActionProcessor.target">0</intProp>
+                <stringProp name="ActionProcessor.duration">0</stringProp>
+              </TestAction>
+              <hashTree>
+                <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="Constant Throughput Timer" enabled="true">
+                  <intProp name="calcMode">0</intProp>
+                  <stringProp name="throughput">${REQ_PER_MIN}</stringProp>
+                </ConstantThroughputTimer>
+                <hashTree/>
+              </hashTree>
+              <TestAction guiclass="TestActionGui" testclass="TestAction" testname="respTime" enabled="true">
+                <intProp name="ActionProcessor.action">1</intProp>
+                <intProp name="ActionProcessor.target">0</intProp>
+                <stringProp name="ActionProcessor.duration">0</stringProp>
+              </TestAction>
+              <hashTree>
+                <JSR223Timer guiclass="TestBeanGUI" testclass="JSR223Timer" testname="JSR223 Timer" enabled="true">
+                  <stringProp name="cacheKey">true</stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="script">double sleep = vars.getObject(&apos;sleep&apos;);
+double respAvg = vars.getObject(&apos;respAvg&apos;);
+
+double previous = sleep;
+double target = ${TARGET_RESPONSE_TIME};
+
+
+if (respAvg &lt; target) {
+	sleep /= 1.5;
+}
+if (respAvg &gt; target) {
+	sleep *= 1.1;
+}
+
+sleep = Math.max(10, sleep);
+sleep = Math.min(20000, sleep);
+
+//System.err.println(&quot;wait (&quot;+respAvg+&quot;) &quot; + previous + &quot; -&gt; &quot; + sleep + &quot; -&gt; &quot; + ((int)sleep));
+vars.putObject(&apos;sleep&apos;, sleep);
+return (int)sleep;</stringProp>
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                </JSR223Timer>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="ENSURE CONSISTENCY" enabled="false"/>
+            <hashTree/>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If not startup loaded" enabled="true">
+              <stringProp name="IfController.condition">${__groovy(vars.getObject(&apos;startup_loaded&apos;) != true)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller" enabled="true">
+                <collectionProp name="ModuleController.node_path">
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="-1133722501">jp@gc - Ultimate Thread Group</stringProp>
+                  <stringProp name="1863395195">Functions</stringProp>
+                  <stringProp name="-1897184643">startup</stringProp>
+                </collectionProp>
+              </ModuleController>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If coins low" enabled="true">
+              <stringProp name="IfController.condition">${__groovy(vars.getObject(&apos;resource.coin&apos;) &lt; 1000)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller" enabled="true">
+                <collectionProp name="ModuleController.node_path">
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="-1133722501">jp@gc - Ultimate Thread Group</stringProp>
+                  <stringProp name="1863395195">Functions</stringProp>
+                  <stringProp name="-500305291">cheat coins</stringProp>
+                </collectionProp>
+              </ModuleController>
+              <hashTree/>
+            </hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="GAME CALLS" enabled="false"/>
+            <hashTree/>
+            <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="% startup" enabled="true">
+              <intProp name="ThroughputController.style">1</intProp>
+              <boolProp name="ThroughputController.perThread">false</boolProp>
+              <intProp name="ThroughputController.maxThroughput">1</intProp>
+              <FloatProperty>
+                <name>ThroughputController.percentThroughput</name>
+                <value>0.1</value>
+                <savedValue>0.0</savedValue>
+              </FloatProperty>
+            </ThroughputController>
+            <hashTree>
+              <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="startup" enabled="true">
+                <collectionProp name="ModuleController.node_path">
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="-1133722501">jp@gc - Ultimate Thread Group</stringProp>
+                  <stringProp name="1863395195">Functions</stringProp>
+                  <stringProp name="-1897184643">startup</stringProp>
+                </collectionProp>
+              </ModuleController>
+              <hashTree/>
+            </hashTree>
+            <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="% produce" enabled="true">
+              <intProp name="ThroughputController.style">1</intProp>
+              <boolProp name="ThroughputController.perThread">false</boolProp>
+              <intProp name="ThroughputController.maxThroughput">1</intProp>
+              <FloatProperty>
+                <name>ThroughputController.percentThroughput</name>
+                <value>50.0</value>
+                <savedValue>0.0</savedValue>
+              </FloatProperty>
+            </ThroughputController>
+            <hashTree>
+              <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="produce" enabled="true">
+                <collectionProp name="ModuleController.node_path">
+                  <stringProp name="-1227702913">WorkBench</stringProp>
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="-1133722501">jp@gc - Ultimate Thread Group</stringProp>
+                  <stringProp name="1863395195">Functions</stringProp>
+                  <stringProp name="-309474080">produce</stringProp>
+                </collectionProp>
+              </ModuleController>
+              <hashTree/>
+            </hashTree>
+            <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="% finish production" enabled="true">
+              <intProp name="ThroughputController.style">1</intProp>
+              <boolProp name="ThroughputController.perThread">false</boolProp>
+              <intProp name="ThroughputController.maxThroughput">1</intProp>
+              <FloatProperty>
+                <name>ThroughputController.percentThroughput</name>
+                <value>100.0</value>
+                <savedValue>0.0</savedValue>
+              </FloatProperty>
+            </ThroughputController>
+            <hashTree>
+              <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="finish production" enabled="true">
+                <collectionProp name="ModuleController.node_path">
+                  <stringProp name="-1227702913">WorkBench</stringProp>
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="-1133722501">jp@gc - Ultimate Thread Group</stringProp>
+                  <stringProp name="1863395195">Functions</stringProp>
+                  <stringProp name="853291622">finish production</stringProp>
+                </collectionProp>
+              </ModuleController>
+              <hashTree/>
+            </hashTree>
+            <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="% build" enabled="true">
+              <intProp name="ThroughputController.style">1</intProp>
+              <boolProp name="ThroughputController.perThread">false</boolProp>
+              <intProp name="ThroughputController.maxThroughput">1</intProp>
+              <FloatProperty>
+                <name>ThroughputController.percentThroughput</name>
+                <value>15.0</value>
+                <savedValue>0.0</savedValue>
+              </FloatProperty>
+            </ThroughputController>
+            <hashTree>
+              <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="build" enabled="true">
+                <collectionProp name="ModuleController.node_path">
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="-1133722501">jp@gc - Ultimate Thread Group</stringProp>
+                  <stringProp name="1863395195">Functions</stringProp>
+                  <stringProp name="94094958">build</stringProp>
+                </collectionProp>
+              </ModuleController>
+              <hashTree/>
+            </hashTree>
+            <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="% sell building" enabled="true">
+              <intProp name="ThroughputController.style">1</intProp>
+              <boolProp name="ThroughputController.perThread">false</boolProp>
+              <intProp name="ThroughputController.maxThroughput">1</intProp>
+              <FloatProperty>
+                <name>ThroughputController.percentThroughput</name>
+                <value>5.0</value>
+                <savedValue>0.0</savedValue>
+              </FloatProperty>
+            </ThroughputController>
+            <hashTree>
+              <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="sell building" enabled="true">
+                <collectionProp name="ModuleController.node_path">
+                  <stringProp name="-1227702913">WorkBench</stringProp>
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="-1133722501">jp@gc - Ultimate Thread Group</stringProp>
+                  <stringProp name="1863395195">Functions</stringProp>
+                  <stringProp name="1085358018">sell building</stringProp>
+                </collectionProp>
+              </ModuleController>
+              <hashTree/>
+            </hashTree>
+            <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="% finish construction" enabled="true">
+              <intProp name="ThroughputController.style">1</intProp>
+              <boolProp name="ThroughputController.perThread">false</boolProp>
+              <intProp name="ThroughputController.maxThroughput">1</intProp>
+              <FloatProperty>
+                <name>ThroughputController.percentThroughput</name>
+                <value>20.0</value>
+                <savedValue>0.0</savedValue>
+              </FloatProperty>
+            </ThroughputController>
+            <hashTree>
+              <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="finish construction" enabled="true">
+                <collectionProp name="ModuleController.node_path">
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="-1133722501">jp@gc - Ultimate Thread Group</stringProp>
+                  <stringProp name="1863395195">Functions</stringProp>
+                  <stringProp name="949852990">finish construction</stringProp>
+                </collectionProp>
+              </ModuleController>
+              <hashTree/>
+            </hashTree>
+            <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="% unlock" enabled="true">
+              <intProp name="ThroughputController.style">1</intProp>
+              <boolProp name="ThroughputController.perThread">false</boolProp>
+              <intProp name="ThroughputController.maxThroughput">1</intProp>
+              <FloatProperty>
+                <name>ThroughputController.percentThroughput</name>
+                <value>2.5</value>
+                <savedValue>0.0</savedValue>
+              </FloatProperty>
+            </ThroughputController>
+            <hashTree>
+              <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="unlock" enabled="true">
+                <collectionProp name="ModuleController.node_path">
+                  <stringProp name="-1227702913">WorkBench</stringProp>
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="-1133722501">jp@gc - Ultimate Thread Group</stringProp>
+                  <stringProp name="1863395195">Functions</stringProp>
+                  <stringProp name="-920090974">unlock grid</stringProp>
+                </collectionProp>
+              </ModuleController>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="cleanup" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="cleanup" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">vars.remove(&apos;login&apos;);</stringProp>
+            </JSR223PreProcessor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Functions" enabled="false"/>
+        <hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="startup" enabled="true"/>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="game design" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+	&quot;checksum&quot;: &quot;n/a&quot;&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${host}</stringProp>
+              <stringProp name="HTTPSampler.port">${port}</stringProp>
+              <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/game/gamedesign</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSR223Assertion guiclass="TestBeanGUI" testclass="JSR223Assertion" testname="JSR223 Assertion" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">import groovy.json.JsonSlurper
+
+vars.putObject(&apos;startup_loaded&apos;, true);
+
+def jsonSlurper = vars.getObject(&apos;jsonSlurper&apos;) as JsonSlurper;
+def response = prev.getResponseDataAsString();
+
+def data = jsonSlurper.parseText(response);
+def content = data.content[0].content
+vars.putObject(&apos;gamedesign&apos;, content);
+
+
+vars.putObject(&apos;gamedesign.productions&apos;, content
+	.findAll{ it[&apos;@type&apos;] == &apos;type.googleapis.com/ProductionDefinitionDTO&apos; }
+	.collectEntries{[it.id, it]}
+);
+
+vars.putObject(&apos;gamedesign.buildings&apos;, content
+	.findAll{ it[&apos;@type&apos;] == &apos;type.googleapis.com/BuildingDefinitionDTO&apos; }
+	.collectEntries{[it.id, it]}
+);
+
+vars.putObject(&apos;gamedesign.cities&apos;, content
+	.findAll{ it[&apos;@type&apos;] == &apos;type.googleapis.com/CityDefinitionDTO&apos; }
+	.collectEntries{[it.id, it]}
+);
+
+vars.putObject(&apos;gamedesign.constructions&apos;, content
+	.findAll{ it[&apos;@type&apos;] == &apos;type.googleapis.com/ConstructionDefinitionDTO&apos; }
+	.collectEntries{[it.id, it]}
+);
+
+</stringProp>
+              </JSR223Assertion>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="startup" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+  &quot;abTestNames&quot;: [&#xd;
+  ]&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${host}</stringProp>
+              <stringProp name="HTTPSampler.port">${port}</stringProp>
+              <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/game/startup</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSR223Assertion guiclass="TestBeanGUI" testclass="JSR223Assertion" testname="JSR223 Assertion" enabled="true">
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="script">
+import groovy.json.JsonSlurper
+
+vars.putObject(&apos;startup_loaded&apos;, true);
+
+def jsonSlurper = vars.getObject(&apos;jsonSlurper&apos;) as JsonSlurper;
+def response = prev.getResponseDataAsString();
+
+def data = jsonSlurper.parseText(response);
+
+// city
+def city = data.content
+	.find { it[&apos;@type&apos;] == &apos;type.googleapis.com/StartupResponse&apos; }
+	.cities
+	.cities[0];
+
+vars.putObject(&apos;cityId&apos;, city.id);
+vars.putObject(&apos;cityDef&apos;, vars.getObject(&apos;gamedesign.cities&apos;).get(city.definition));
+
+def updateGrid = vars.getObject(&apos;updateGrid&apos;);
+
+
+// grid
+data.content
+	.findAll { it[&apos;@type&apos;] == &apos;type.googleapis.com/GridPush&apos; }
+	.findAll { it.cityId == city.id }
+	.collect { it.unlocked ?: [] }
+	.flatten()
+	.each {
+		updateGrid(it.x, it.y, it.width, it.height, vars.getObject(&apos;GRID_UNLOCKED&apos;));
+	}
+
+
+// resources
+data.content
+	.find { it[&apos;@type&apos;] == &apos;type.googleapis.com/GetResourceResponse&apos; }
+	.inventory
+	.each { vars.putObject(&apos;resource.&apos; + it.id, Long.parseLong(it.amount)) }
+
+// buildings
+data.content
+	.findAll { it[&apos;@type&apos;] == &apos;type.googleapis.com/ListBuildingsResponse&apos; }
+	.collect { it.buildings ?: [] }
+	.flatten()
+	.findAll { it.owningEntityId == city.id }
+	.each {
+		it.definition = vars.getObject(&apos;gamedesign.buildings&apos;).get(it.definition)
+		(vars.getObject(&apos;buildings&apos;) as Map).put(it.id, it)
+
+		if (it.rotation != &quot;DEGREES_90&quot; &amp;&amp; it.rotation != &quot;DEGREES_270&quot;) {
+			updateGrid(it.x, it.y, it.definition.width, it.definition.height, vars.getObject(&apos;GRID_BUILDING&apos;));
+		} else {
+			updateGrid(it.x, it.y, it.definition.height, it.definition.width, vars.getObject(&apos;GRID_BUILDING&apos;));
+		}
+	}
+
+// productions
+data.content
+	.findAll { it[&apos;@type&apos;] == &apos;type.googleapis.com/ListProductionsResponse&apos; }
+	.collect { it.productions ?: [] }
+	.flatten()
+	.each { 
+		it.definition = vars.getObject(&apos;gamedesign.productions&apos;).get(it.definition)
+		(vars.getObject(&apos;productions&apos;) as Map).put(it.entityId, it)
+	}
+
+
+// constructions
+data.content
+	.findAll { it[&apos;@type&apos;] == &apos;type.googleapis.com/ListConstructionsResponse&apos; }
+	.collect { it.constructions ?: [] }
+	.flatten()
+	.each { 
+		it.definition = vars.getObject(&apos;gamedesign.constructions&apos;).get(it.definition)
+		(vars.getObject(&apos;constructions&apos;) as Map).put(it.entityId, it)
+	}</stringProp>
+                <stringProp name="scriptLanguage">groovy</stringProp>
+              </JSR223Assertion>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="cheat coins" enabled="true"/>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="cheat coins" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${host}</stringProp>
+              <stringProp name="HTTPSampler.port">${port}</stringProp>
+              <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/game/test/cheat-coins</stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree/>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="produce" enabled="true"/>
+          <hashTree>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Test Action" enabled="true">
+              <intProp name="ActionProcessor.action">1</intProp>
+              <intProp name="ActionProcessor.target">0</intProp>
+              <stringProp name="ActionProcessor.duration">0</stringProp>
+            </TestAction>
+            <hashTree>
+              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">def buildings = vars.getObject(&apos;buildings&apos;) as Map;
+def productionDefs = vars.getObject(&apos;gamedesign.productions&apos;) as Map;
+def allProductions = vars.getObject(&apos;productions&apos;) as Map;
+def allConstructions = vars.getObject(&apos;constructions&apos;) as Map;
+
+def noProdBuildings = buildings
+	.collect { k,v -&gt; v }
+	.grep{ !allProductions.get(it.id) }
+	.grep{ !allConstructions.get(it.id) }
+	.grep{ it.definition.definitions
+		.grep { it2 -&gt; it2[&apos;@type&apos;] == &apos;type.googleapis.com/DefinitionReferenceDTO&apos; }
+		.grep { it2 -&gt; it2[&apos;type&apos;] == &apos;type.googleapis.com/ProductionDefinitionDTO&apos; }
+		.size() &gt; 0
+	}
+
+
+if (!noProdBuildings) {
+	vars.putObject(&apos;can_produce&apos;, false);
+	return;
+}
+
+
+vars.putObject(&apos;can_produce&apos;, true);
+
+Collections.shuffle(noProdBuildings)
+def building = noProdBuildings[0];
+
+def productions = building.definition.definitions
+		.grep { it[&apos;@type&apos;] == &apos;type.googleapis.com/DefinitionReferenceDTO&apos; }
+		.grep { it[&apos;type&apos;] == &apos;type.googleapis.com/ProductionDefinitionDTO&apos; }
+		.collect { productionDefs.get(it.id) }
+		
+
+
+//vars.putObject(&apos;produce_building&apos;, building);
+//vars.putObject(&apos;produce_definition&apos;, production);
+
+vars.put(&apos;produce_building_id&apos;, &quot;&quot;+building.id);
+vars.put(&apos;produce_definition_id&apos;, &quot;&quot;+productions[0].id);
+</stringProp>
+              </JSR223PreProcessor>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If can produce" enabled="true">
+              <stringProp name="IfController.condition">${__groovy(vars.getObject(&apos;can_produce&apos;) == true)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="produce" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+  &quot;entityId&quot;: ${produce_building_id},&#xd;
+  &quot;production&quot;: &quot;${produce_definition_id}&quot;&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${host}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/game/production/start</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <JSR223Assertion guiclass="TestBeanGUI" testclass="JSR223Assertion" testname="JSR223 Assertion" enabled="true">
+                  <stringProp name="cacheKey">true</stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="script">import groovy.json.JsonSlurper
+
+def buildings = vars.getObject(&apos;buildings&apos;) as Map;
+def productions = vars.getObject(&apos;productions&apos;) as Map;
+
+
+
+def jsonSlurper = vars.getObject(&apos;jsonSlurper&apos;) as JsonSlurper;
+def response = prev.getResponseDataAsString();
+
+def production = jsonSlurper.parseText(response).content[0].production;
+
+production.definition = vars.getObject(&apos;gamedesign.productions&apos;).get(production.definition)
+
+productions[production.entityId] = production
+</stringProp>
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                </JSR223Assertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="build" enabled="true"/>
+          <hashTree>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Test Action" enabled="true">
+              <intProp name="ActionProcessor.action">1</intProp>
+              <intProp name="ActionProcessor.target">0</intProp>
+              <stringProp name="ActionProcessor.duration">0</stringProp>
+            </TestAction>
+            <hashTree>
+              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">
+def buildingDefs = vars.getObject(&apos;gamedesign.buildings&apos;)
+
+
+def canFit(buildingDef) {
+	def isFree = vars.getObject(&apos;gridIsFree&apos;)
+	def grid = vars.getObject(&apos;grid&apos;)
+	
+	for (int x = 0; x &lt; grid.size(); x++) {
+		for (int y = 0; y &lt; grid[x]?.size(); y++) {
+			if (isFree(x, y)) {
+				if (canFit(buildingDef, x, y)) {
+					return [x, y];
+				}
+			}
+		}
+	}
+
+	return false;
+}
+
+def canFit(buildingDef, startX, startY) {
+	def isFree = vars.getObject(&apos;gridIsFree&apos;)
+	
+	for (int x = startX; x &lt; startX + buildingDef.width; x++) {
+		for (int y = startY; y &lt; startY + buildingDef.height; y++) {
+			if ( !isFree(x,y) ) {
+				return false
+			}
+		}
+	}
+	return true;
+}
+
+
+def canBuild(constructionDef) {
+	def start = constructionDef.action?.start
+
+	if (start == null) {
+		return true;
+	}
+
+	def enoughResources = start.resourceChanges
+		.grep { it.amount &lt; 0 }
+		.grep {
+			def playerRes = vars.get(&apos;resource.&apos; + it.id) ?: 0
+			return playerRes &lt; - it.amount
+		}
+		.size() == 0;
+	if (!enoughResources) {
+		return false;
+	}
+
+
+	def meetsRequirements = start.requirements;
+
+	return true;
+}
+
+
+def constructableBuildingDefs = buildingDefs
+	.collect { k,v -&gt; v }
+	.grep{ it.definitions
+		.grep { it2 -&gt; it2[&apos;@type&apos;] == &apos;type.googleapis.com/DefinitionReferenceDTO&apos; }
+		.grep { it2 -&gt; it2[&apos;type&apos;] == &apos;type.googleapis.com/ConstructionDefinitionDTO&apos; }
+		.grep { it2 -&gt; canBuild(it2) }
+		.size() &gt; 0
+	}
+
+vars.putObject(&apos;can_build&apos;, false);
+if (!constructableBuildingDefs) {
+	return;
+}
+
+
+Collections.shuffle(constructableBuildingDefs)
+while (constructableBuildingDefs) {
+
+	def building = constructableBuildingDefs.pop();
+
+	def fit = canFit(building);
+	if (fit == false) {
+		continue;
+	}
+
+	vars.putObject(&apos;can_build&apos;, true);
+	//vars.putObject(&apos;build_building&apos;, building);
+	//vars.putObject(&apos;build_space&apos;, fit);
+
+	vars.put(&apos;build_building_id&apos;, &quot;&quot;+building.id);
+	vars.put(&apos;build_building_x&apos;, &quot;&quot;+fit[0]);
+	vars.put(&apos;build_building_y&apos;, &quot;&quot;+fit[1]);
+}</stringProp>
+              </JSR223PreProcessor>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If can build" enabled="true">
+              <stringProp name="IfController.condition">${__groovy(vars.getObject(&apos;can_build&apos;) == true)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="build" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+  &quot;cityId&quot;: ${cityId},&#xd;
+  &quot;key&quot;: &quot;${build_building_id}&quot;,&#xd;
+  &quot;rotation&quot;: &quot;DEGREES_0&quot;,&#xd;
+  &quot;x&quot;: ${build_building_x},&#xd;
+  &quot;y&quot;: ${build_building_y}&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${host}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/game/building/build</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <JSR223Assertion guiclass="TestBeanGUI" testclass="JSR223Assertion" testname="JSR223 Assertion" enabled="true">
+                  <stringProp name="cacheKey">true</stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="script">import groovy.json.JsonSlurper
+
+def buildings = vars.getObject(&apos;buildings&apos;) as Map;
+def productions = vars.getObject(&apos;productions&apos;) as Map;
+def constructions = vars.getObject(&apos;constructions&apos;) as Map;
+def constructionDefs = vars.getObject(&apos;gamedesign.constructions&apos;) as Map;
+
+def updateGrid = vars.getObject(&apos;updateGrid&apos;);
+
+
+def jsonSlurper = vars.getObject(&apos;jsonSlurper&apos;) as JsonSlurper;
+def response = prev.getResponseDataAsString();
+def content = jsonSlurper.parseText(response).content
+def building = content[0].building
+building.definition = vars.getObject(&apos;gamedesign.buildings&apos;).get(building.definition)
+
+buildings[building.id] = building
+
+
+if (building.rotation != &quot;DEGREES_90&quot; &amp;&amp; building.rotation != &quot;DEGREES_270&quot;) {
+	updateGrid(building.x, building.y, building.definition.width, building.definition.height, vars.getObject(&apos;GRID_BUILDING&apos;));
+} else {
+	updateGrid(building.x, building.y, building.definition.height, building.definition.width, vars.getObject(&apos;GRID_BUILDING&apos;));
+}
+
+</stringProp>
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                </JSR223Assertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="finish construction" enabled="true"/>
+          <hashTree>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Test Action" enabled="true">
+              <intProp name="ActionProcessor.action">1</intProp>
+              <intProp name="ActionProcessor.target">0</intProp>
+              <stringProp name="ActionProcessor.duration">0</stringProp>
+            </TestAction>
+            <hashTree>
+              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">import java.time.Instant;
+
+def constructions = vars.getObject(&apos;constructions&apos;)
+
+
+def isFinished(construction) {
+	def start = Instant.parse(construction.start);
+	
+	double duration = Double.parseDouble(construction.construction.duration.replace(&quot;s&quot;, &quot;&quot;))
+	long durationSeconds = (long) duration;
+	long durationNanos = (long) ((durationSeconds-(long)durationSeconds) * 1000000000l)
+	
+	def end = start.plusSeconds(durationSeconds).plusNanos(durationNanos)
+
+	return Instant.now().isAfter(end.plusSeconds(1))
+}
+
+def finished = constructions
+	.collect { k,v -&gt; v }
+	.grep { isFinished(it) }
+
+if (finished.isEmpty()) {
+	vars.putObject(&apos;can_finish_construction&apos;, false);
+	return
+}
+
+vars.putObject(&apos;can_finish_construction&apos;, true);
+Collections.shuffle(finished)
+def construction = finished[0]
+
+vars.put(&apos;construction_entity_id&apos;, &quot;&quot;+construction.entityId);
+vars.putObject(&apos;construction_entity&apos;, construction);</stringProp>
+              </JSR223PreProcessor>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If can finish construction" enabled="true">
+              <stringProp name="IfController.condition">${__groovy(vars.getObject(&apos;can_finish_construction&apos;) == true)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="finish_construction" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+  &quot;entityId&quot;: ${construction_entity_id}&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${host}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/game/construction/finish</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <JSR223Assertion guiclass="TestBeanGUI" testclass="JSR223Assertion" testname="JSR223 Assertion" enabled="true">
+                  <stringProp name="cacheKey">true</stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="script">
+def constructions = vars.getObject(&apos;constructions&apos;) as Map;
+
+constructions.remove(vars.getObject(&apos;construction_entity&apos;).entityId)
+
+vars.putObject(&apos;can_finish_construction&apos;, null);</stringProp>
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                </JSR223Assertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="finish production" enabled="true"/>
+          <hashTree>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Test Action" enabled="true">
+              <intProp name="ActionProcessor.action">1</intProp>
+              <intProp name="ActionProcessor.target">0</intProp>
+              <stringProp name="ActionProcessor.duration">0</stringProp>
+            </TestAction>
+            <hashTree>
+              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">import java.time.Instant;
+
+
+def productions = vars.getObject(&apos;productions&apos;)
+
+
+def isFinished(production) {
+	def start = Instant.parse(production.startTime);
+	
+	double duration = Double.parseDouble(production.definition.duration.replace(&quot;s&quot;, &quot;&quot;))
+	long durationSeconds = (long) duration;
+	long durationNanos = (long) ((durationSeconds-(long)durationSeconds) * 1000000000l)
+	
+	def end = start.plusSeconds(durationSeconds).plusNanos(durationNanos)
+
+	return Instant.now().isAfter(end.plusSeconds(1))
+}
+
+def finished = productions
+	.collect { k,v -&gt; v }
+	.grep { isFinished(it) }
+
+
+vars.putObject(&apos;can_finish_production&apos;, !finished.isEmpty());
+if (finished.isEmpty()) {
+	return
+}
+
+Collections.shuffle(finished)
+def production = finished[0]
+
+vars.put(&apos;production_entity_id&apos;, &quot;&quot;+production.entityId);
+vars.putObject(&apos;production_entity&apos;, production);</stringProp>
+              </JSR223PreProcessor>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If can finish production" enabled="true">
+              <stringProp name="IfController.condition">${__groovy(vars.getObject(&apos;can_finish_production&apos;) == true)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="finish_production" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+  &quot;entityId&quot;: ${production_entity_id}&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${host}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/game/production/collect</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <JSR223Assertion guiclass="TestBeanGUI" testclass="JSR223Assertion" testname="JSR223 Assertion" enabled="true">
+                  <stringProp name="cacheKey">true</stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="script">
+def productions = vars.getObject(&apos;productions&apos;) as Map;
+
+productions.remove(vars.getObject(&apos;production_entity&apos;).entityId)</stringProp>
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                </JSR223Assertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="unlock grid" enabled="true"/>
+          <hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="if no space" enabled="false">
+              <stringProp name="IfController.condition">${__groovy(vars.getObject(&apos;can_finish_construction&apos;) == false)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree/>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Test Action" enabled="true">
+              <intProp name="ActionProcessor.action">1</intProp>
+              <intProp name="ActionProcessor.target">0</intProp>
+              <stringProp name="ActionProcessor.duration">0</stringProp>
+            </TestAction>
+            <hashTree>
+              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">
+
+def cityDef = vars.getObject(&apos;cityDef&apos;)
+def isUnlocked = vars.getObject(&apos;gridIsUnlocked&apos;)
+
+def isAdjacent(area) {
+	def x = area.x ?: 0
+	def y = area.y ?: 0
+	def w = area.width
+	def h = area.height
+
+	def isUnlocked = vars.getObject(&apos;gridIsUnlocked&apos;)
+	
+	return ( 
+		isUnlocked(x-1, y)
+		|| isUnlocked(x+h, y)
+		|| isUnlocked(x, y-1)
+		|| isUnlocked(x, y+h)
+	)
+}
+
+
+def unlockable = cityDef.definitions
+	.grep { it[&apos;@type&apos;] == &apos;type.googleapis.com/GridDefinitionDTO&apos; }
+	.collect { it.areas }
+	.flatten()
+	.grep { !isUnlocked(it.area.x, it.area.y) }
+	.grep { isAdjacent(it.area) }
+
+vars.putObject(&apos;can_unlock&apos;, !unlockable.isEmpty())
+
+if (unlockable.isEmpty()) {
+	return
+}
+
+
+Collections.shuffle(unlockable)
+def unlock = unlockable[0]
+
+vars.put(&apos;grid_unlock_x&apos;, &quot;&quot;+(unlock.area.x ?: 0))
+vars.put(&apos;grid_unlock_y&apos;, &quot;&quot;+(unlock.area.y ?: 0))
+vars.putObject(&apos;grid_unlock_entity&apos;, unlock);
+</stringProp>
+              </JSR223PreProcessor>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="if can unlock" enabled="true">
+              <stringProp name="IfController.condition">${__groovy(vars.getObject(&apos;can_unlock&apos;) == true)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="unlock" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+  &quot;cityId&quot;: ${cityId},&#xd;
+  &quot;x&quot;: ${grid_unlock_x},&#xd;
+  &quot;y&quot;: ${grid_unlock_y}&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${host}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/game/grid/unlock</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <JSR223Assertion guiclass="TestBeanGUI" testclass="JSR223Assertion" testname="JSR223 Assertion" enabled="true">
+                  <stringProp name="cacheKey">true</stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="script">
+
+def updateGrid = vars.getObject(&apos;updateGrid&apos;);
+def updateGridIf = vars.getObject(&apos;updateGridIf&apos;);
+def buildingDefs = vars.getObject(&apos;gamedesign.buildings&apos;)
+
+def entity = vars.getObject(&apos;grid_unlock_entity&apos;);
+def area = entity.area
+
+updateGrid(area.x, area.y, area.width, area.height, vars.getObject(&apos;GRID_UNLOCKED&apos;));
+
+if (entity.onClear) {
+
+	entity.onClear
+		.grep { it[&apos;@type&apos;] == &apos;type.googleapis.com/AddBuildingActionDTO&apos; }
+		.each {
+			def building = buildingDefs[it.building.id];
+			def x = it.x ?: 0
+			def y = it.y ?: 0
+	
+			updateGrid(x, y, building.width, building.height, vars.getObject(&apos;GRID_BUILDING&apos;));
+		}
+}</stringProp>
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                </JSR223Assertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="sell building" enabled="true"/>
+          <hashTree>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Test Action" enabled="true">
+              <intProp name="ActionProcessor.action">1</intProp>
+              <intProp name="ActionProcessor.target">0</intProp>
+              <stringProp name="ActionProcessor.duration">0</stringProp>
+            </TestAction>
+            <hashTree>
+              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">
+def buildings = vars.getObject(&apos;buildings&apos;)
+def constructions = vars.getObject(&apos;constructions&apos;)
+
+def canSell(constructions, sellDef) {
+	if (constructions[sellDef.id]) {
+		return false;
+	}
+
+	return sellDef.action.start.resourceChanges
+		.grep { 
+			def playerHas = vars.getObject(&apos;resource.&apos; + it.id)?:0
+			def required = Long.parseLong(it.amount)
+
+			playerHas &lt; required
+		}
+		.size() == 0
+}
+
+def sellableBuildings = buildings
+	.collect { k,v -&gt; v }
+	.grep{ it.definition.definitions
+		.grep { it2 -&gt; it2[&apos;@type&apos;] == &apos;type.googleapis.com/SellBuildingDefinitionDTO&apos; }
+		.grep { it2 -&gt; canSell(constructions, it2) }
+		.size() &gt; 0
+	}
+
+def canSell = !sellableBuildings.isEmpty();
+vars.putObject(&apos;can_sell_building&apos;, canSell);
+if (!canSell) {
+	return;
+}
+
+Collections.shuffle(sellableBuildings);
+
+def sellBuilding = sellableBuildings[0];
+
+vars.put(&apos;sell_building_id&apos;, sellBuilding.id);
+vars.putObject(&apos;sell_building_entity&apos;, sellBuilding);</stringProp>
+              </JSR223PreProcessor>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If can sell building" enabled="true">
+              <stringProp name="IfController.condition">${__groovy(vars.getObject(&apos;can_sell_building&apos;) == true)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="sell building" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+  &quot;buildingId&quot;: ${sell_building_id}&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${host}</stringProp>
+                <stringProp name="HTTPSampler.port">${port}</stringProp>
+                <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/game/building/sell</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <JSR223Assertion guiclass="TestBeanGUI" testclass="JSR223Assertion" testname="JSR223 Assertion" enabled="true">
+                  <stringProp name="cacheKey">true</stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="script">def updateGridAndOr = vars.getObject(&apos;updateGridAndOr&apos;);
+def buildings = vars.getObject(&apos;buildings&apos;) as Map;
+def productions = vars.getObject(&apos;productions&apos;) as Map;
+def constructions = vars.getObject(&apos;constructions&apos;) as Map;
+def building = vars.getObject(&apos;sell_building_entity&apos;);
+
+buildings.remove(building.id);
+productions.remove(building.id);
+constructions.remove(building.id);
+
+def allButBuilding = (vars.getObject(&apos;GRID_ALL&apos;) ^ vars.getObject(&apos;GRID_BUILDING&apos;))
+
+def width = building.definition.width
+def height = building.definition.height
+if (building.rotation == &apos;DEGREES_90&apos; || building.rotation == &apos;DEGREES_270&apos;) {
+	def tmpWidth = width
+	width = height
+	height = tmpWidth
+}
+
+updateGridAndOr(building.x, building.y, width, height, 0, allButBuilding);</stringProp>
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                </JSR223Assertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.HitsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Hits per Second" enabled="false">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <longProp name="interval_grouping">1000</longProp>
+        <boolProp name="graph_aggregated">false</boolProp>
+        <stringProp name="include_sample_labels"></stringProp>
+        <stringProp name="exclude_sample_labels"></stringProp>
+        <stringProp name="start_offset"></stringProp>
+        <stringProp name="end_offset"></stringProp>
+        <boolProp name="include_checkbox_state">false</boolProp>
+        <boolProp name="exclude_checkbox_state">false</boolProp>
+      </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+      <hashTree/>
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ResponseTimesOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Response Times Over Time" enabled="false">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <longProp name="interval_grouping">500</longProp>
+        <boolProp name="graph_aggregated">false</boolProp>
+        <stringProp name="include_sample_labels"></stringProp>
+        <stringProp name="exclude_sample_labels"></stringProp>
+        <stringProp name="start_offset"></stringProp>
+        <stringProp name="end_offset"></stringProp>
+        <boolProp name="include_checkbox_state">false</boolProp>
+        <boolProp name="exclude_checkbox_state">false</boolProp>
+      </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
